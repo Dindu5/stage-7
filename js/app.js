@@ -1,3 +1,9 @@
+window.addEventListener('load', function() {
+	const loader = document.querySelector('.loader');
+	loader.classList.add('done');
+	console.log('loading');
+});
+
 var modal = document.getElementById('mypopModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
@@ -159,3 +165,101 @@ function validation() {
 		button.disabled = true;
 	}
 }
+// Animations
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from('#myImg1', {
+	scrollTrigger: {
+		trigger: '#myImg1',
+		toggleActions: 'restart pause resume pause'
+	},
+	opacity: 0,
+	x: -500,
+	duration: 3
+});
+
+gsap.from('#myImg', {
+	scrollTrigger: {
+		trigger: '#myImg',
+		toggleActions: 'restart pause resume none'
+	},
+	opacity: 0,
+	x: 500,
+	duration: 3
+});
+gsap.from('#myImg2', {
+	scrollTrigger: {
+		trigger: '#myImg2',
+		toggleActions: 'restart pause resume none'
+	},
+	opacity: 0,
+	x: 500,
+	duration: 3
+});
+gsap.from('#myImg3', {
+	scrollTrigger: {
+		trigger: '#myImg3',
+		toggleActions: 'restart pause resume pause'
+	},
+	opacity: 0,
+	x: -500,
+	duration: 3
+});
+gsap.from('#myImg4', {
+	scrollTrigger: {
+		trigger: '#myImg4',
+		toggleActions: 'restart pause resume none'
+	},
+	opacity: 0,
+	x: 500,
+	duration: 3
+});
+gsap.from('#myImg5', {
+	scrollTrigger: {
+		trigger: '#myImg5',
+		toggleActions: 'restart pause resume pause'
+	},
+	opacity: 0,
+	x: -500,
+	duration: 3
+});
+
+window.addEventListener('load', function() {
+	gsap.from('.header', {
+		x: '50%',
+		y: '10%',
+		opacity: 0,
+		scale: 0,
+		duration: 3
+	});
+	gsap.from('.header-img', {
+		x: 500,
+		opacity: 0,
+		scale: 0,
+		duration: 3
+	});
+	gsap.from('.navigation', {
+		y: -200,
+		opacity: 0,
+		duration: 3
+	}),
+		gsap.from('.main-text', {
+			x: -500,
+			opacity: 0,
+			duration: 3,
+			delay: 2
+		}),
+		gsap.from('.sub-text', {
+			x: -500,
+			opacity: 0,
+			duration: 3,
+			delay: 2
+		}),
+		gsap.from('.notify', {
+			y: 50,
+			opacity: 0,
+			duration: 3,
+			delay: 3
+		});
+});
