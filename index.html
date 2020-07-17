@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div class="row d-flex justify-items-center align-items-center">
+            <div class="row d-flex main-landing justify-items-center align-items-center">
                 <div class="col-sm-4 my-1">
                     <div>
                         <h1 class="main-text">
@@ -229,7 +229,7 @@
             </div>
 
             <div class="row d-flex justify-items-center align-items-center working-row justify-content-center">
-                <div class="col-sm-6 box-in-right d-flex my-1 position-relative">
+                <div class="col-sm-6 box-in-right d-flex my-1 position-relative justify-content-center">
                     <div class="box-in">
                         <h3 class="working-text">Finger Print Scan</h3>
                         <p class="paragraph-text">
@@ -311,8 +311,7 @@
     <section id="subscribe">
         <h3 class="text-center head-text">Get Notified</h3>
         <div class="container-fluid">
-            <div class="row text-center w-75 m-auto">
-                <p class="text-center subscribtion-text">
+            <div class="row text-center subscription-text w-75 m-auto">
                     Be one of the first to use this exciting app.
                     What to get notified on app realease? 
                     Just give us your email address and will let you know when its deployed
@@ -360,8 +359,8 @@
     <!-- FEATURES SECTION -->
     <section id="features">
         <h3 class="text-center head-text">Cool Features</h3>
-        <div class="row text-center w-75 m-auto">
-            <p class="text-center subscribtion-text">
+        <div class="row text-center sub-row w-75 m-auto">
+            <p class="text-center subscription-text">
                 Be one of the first to use this exciting app.
                 What to get notified on app realease? 
                 Just give us your email address and will let you know when its deployed
@@ -442,13 +441,45 @@
 
 
     <footer id="footer">
+        <p class="text-center subscription-text">
+            Be one of the very first to use this awesome app.
+        </p>
+        <form id="form" method="POST">
+            <!--{% csrf_token %}-->
+            
+            <div id="inputBox">
+                <!--{{form.email}}--> <input type="email" name="" id="id_email" placeholder="Enter your Email Address" onkeydown="validation()" required>
+            </div>
+            <!--
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                
+                    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <strong>{{ message }}</strong>
+                    </div>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            -->
+            <span id="text"></span>
+            <input type="submit" value="Notify Me" class="submitButton">
+        </form>
         <div class="d-flex align-items-center">
             <div class="footer-logo">
                 <img src="img/Logo Shapes 12.png" alt="">
             </div>
             <h3 class="footer-logo-text ml-2">GlowSkin</h3>
         </div>
-        <div class="social"></div>
+        <div class="social d-flex pull-right">
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-twitter' ></i>
+            <i class='bx bxl-whatsapp' ></i>
+        </div>
 
     </footer>
 

@@ -7,6 +7,7 @@ body {
 	margin: 0;
 	padding: 0;
 	position: relative;
+	scroll-behavior: smooth;
 }
 :root {
 	--header-font: 'Cormorant', sans-serif;
@@ -402,6 +403,7 @@ h1.main-text {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	border: none;
 }
 .submitButton:hover,
 .submitButton:active,
@@ -708,6 +710,9 @@ h1.main-text {
 		padding: 2rem 3.5rem;
 		background-color: var(--background-gray);
 	}
+	.subscription-text {
+		font-size: 1.9vw;
+	}
 
 	/* ======= Countdown Timmer ====== */
 
@@ -773,14 +778,15 @@ h1.main-text {
 		width: 2.5rem;
 	}
 	.header-img {
-		width: 55%;
+		width: 70%;
 	}
 	.main-landing {
-		text-align: center;
+		text-align: center !important;
 		margin-top: 3rem;
 	}
 	.logo-text {
 		font-size: 1.3rem;
+		color: var(--secondary-color);
 	}
 	h1.main-text {
 		font-size: 5vw;
@@ -788,17 +794,18 @@ h1.main-text {
 		line-height: 1;
 		color: var(--secondary-color);
 		letter-spacing: 1px;
+		text-align: center;
 	}
 	.sub-text {
-		font-size: 2.5vw;
-
-		width: 75%;
+		font-size: 3vw;
+		width: 85%;
 		margin: auto;
 		margin-bottom: 2rem;
+		text-align: center;
 	}
 	.notify {
 		padding: 0.4rem 2rem;
-		font-size: 1.7vw;
+		font-size: 2.5vw;
 		margin-bottom: 1rem;
 	}
 
@@ -808,16 +815,17 @@ h1.main-text {
 		padding: 2rem 1.5rem;
 	}
 	.img-box {
-		width: 40%;
+		width: 60%;
 	}
 	.head-text {
-		font-size: 4.6vw;
+		font-size: 5vw;
 		margin-bottom: 1rem;
 	}
 	.transform-text {
 		line-height: 1.2;
 		letter-spacing: 0.7px;
-		font-size: 2.8vw;
+		font-size: 3.5vw;
+		font-weight: 500;
 		text-align: center;
 	}
 
@@ -869,8 +877,12 @@ h1.main-text {
 		padding: 2rem 1.5rem;
 	}
 	.subscription-text {
-		font-size: 1.2vw;
-		width: 85% !important;
+		font-size: 3vw;
+		text-align: center;
+		width: 100%;
+	}
+	.sub-row {
+		width: 100% !important;
 	}
 	/* ======= Countdown Timmer ====== */
 
@@ -889,45 +901,52 @@ h1.main-text {
 		margin-top: -5px;
 	}
 	/* ===== form ====== */
-	/*
+
 	#form #id_email {
-		width: 65% !important;
-		border: 2px solid rgb(214, 214, 214) !important;
-		padding: 0.5rem 1.5rem !important;
-		font-size: 1rem !important;
+		width: 100% !important;
+		border: 1.5px solid rgb(214, 214, 214) !important;
+		padding: 0.3rem 1rem !important;
+		font-size: 0.8rem !important;
 		margin-bottom: 0.7rem !important;
 		margin-top: 1.5rem !important;
 	}
+	#form #id_email:hover,
+	#form #id_email:active,
+	#form #id_email:focus {
+		border: 1.5px solid var(--secondary-color) !important;
+	}
 	#text {
-		padding: 5px;
-		margin-bottom: 10px;
+		padding: 4px;
+		margin-bottom: 8px;
+		font-size: 0.7rem;
 	}
-	#form #inputBox:before {
-		content: '';
-		position: absolute;
-	}
+
 	.submitButton {
-		padding: 0.3rem 1.8rem;
-		font-size: 1.5vw;
-	}*/
+		padding: 0.4rem 2rem;
+		font-size: 2.5vw;
+		margin-bottom: 1rem;
+	}
 	/* ========== FEATURES SECTION ======== */
 
 	#features {
 		padding: 2rem 2rem;
 	}
 	.feature-box {
-		padding: 1.2rem;
+		padding: 4vw;
 		margin: 1rem;
+		height: 250px;
 	}
 	.feature-box h3 {
-		font-size: 3.5rem;
+		font-size: 3rem;
 	}
 	.feature-heading {
-		font-size: 1rem;
+		font-size: 3.2vw;
+		margin-bottom: 3vh;
 	}
 	.feature-paragraph {
-		font-size: 1rem;
+		font-size: 2.5vw;
 		line-height: 1.3;
+		text-align: justify;
 	}
 
 	/* =============== FOOTER =============== */
@@ -938,6 +957,7 @@ h1.main-text {
 	.footer-logo {
 		width: 2rem;
 		padding: 0.3rem;
+		margin: 0;
 	}
 	.footer-logo-text {
 		font-size: 1rem;
